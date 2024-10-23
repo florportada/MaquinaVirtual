@@ -73,11 +73,7 @@ class StackVM():
     
     def __init__(self):
 
-        # Inicializar pilas específicas.
-        self.modelos = Pila("modelos")
-        self.peinados = Pila("peinados")
-        self.alas = Pila("alas")
-        self.zapatos = Pila("zapatos")
+        # Inicializar pila "vestir".
         self.vestir = Pila("vestir")  # Pila para construir el outfit de la modelo.
 
         # Listas de elementos permitidos para cada categoría. 
@@ -247,7 +243,7 @@ class StackVM():
 
                 # Mostrar el video de la modelo que coincida. 
                 if os.path.exists(self.videos_modelos[modelo]):
-                    print("El archivo existe y se puede acceder.")
+                    # print("El archivo existe y se puede acceder.")
                     if platform.system() == "Darwin":  # macOS
                         os.system(f"open '{self.videos_modelos[modelo]}'")
                 else:
